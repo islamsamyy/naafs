@@ -1,0 +1,24 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@/lib/supabase/server';
+import * as notificationService from '@/lib/services/notificationService';
+
+export async function POST(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params;
+  try {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+
+    if (!user) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    await notificationService.markNotificationAsRead(id);
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error('Error marking notification as read:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
+}

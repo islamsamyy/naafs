@@ -1,0 +1,124 @@
+
+============================================================
+  NAFIS -- Full Playwright Test Suite
+  Target : http://localhost:3002
+  Shots  : D:\nafs\nafis-app\tests\screenshots
+  Log    : D:\nafs\nafis-app\tests\test_results.log
+============================================================
+
+  Waiting for dev server to be HTTP-ready...
+  Dev server is ready. Starting tests.
+
+
+────────────────────────────────────────────────────────────
+  [TEST]  Public Marketing Pages
+────────────────────────────────────────────────────────────
+  [PASS]  Home page loads  ->  نافِس — المنافسة تصنع أفضل سعر
+  [PASS]  Home has header/nav
+  [PASS]  Home has navigation links
+  [PASS]  Explore page loads
+  [PASS]  Explore has search/filter
+  [PASS]  Freelancers page loads
+  [PASS]  Auctions page loads
+  [PASS]  How-it-works page loads
+  [PASS]  Pricing page loads
+
+────────────────────────────────────────────────────────────
+  [TEST]  Auth Pages
+────────────────────────────────────────────────────────────
+  [PASS]  Login page loads
+  [PASS]  Login has email field
+  [PASS]  Login has password field
+  [PASS]  Login has submit button
+  [PASS]  Register page loads
+  [PASS]  Register has form elements (role selection or inputs)
+  [PASS]  Forgot-password page loads
+  [PASS]  Forgot-password has email field
+
+────────────────────────────────────────────────────────────
+  [TEST]  RTL Arabic Layout
+────────────────────────────────────────────────────────────
+  [PASS]  Root HTML dir=rtl  ->  dir=rtl
+  [PASS]  Arabic font applied  ->  Cairo, "Noto Sans Arabic", sans-serif
+  [PASS]  Login page is RTL
+
+────────────────────────────────────────────────────────────
+  [TEST]  Responsive Breakpoints
+────────────────────────────────────────────────────────────
+  [PASS]  No horizontal scroll at mobile_375 (375px)  ->  scrollWidth=375
+  [PASS]  No horizontal scroll at tablet_768 (768px)  ->  scrollWidth=768
+  [PASS]  No horizontal scroll at desktop_1440 (1440px)  ->  scrollWidth=1440
+
+────────────────────────────────────────────────────────────
+  [TEST]  Navigation Flows
+────────────────────────────────────────────────────────────
+  [PASS]  Home has multiple internal links  ->  found 34
+  [PASS]  Can navigate to /explore
+  [PASS]  Projects page loads
+
+────────────────────────────────────────────────────────────
+  [TEST]  Async Image Loading
+────────────────────────────────────────────────────────────
+  [PASS]  No broken images on freelancers
+  [PASS]  All images have alt text on freelancers  ->  0 missing
+  [PASS]  No broken images on explore
+  [PASS]  All images have alt text on explore  ->  0 missing
+
+────────────────────────────────────────────────────────────
+  [TEST]  Login Form Interaction
+────────────────────────────────────────────────────────────
+  [PASS]  Empty submit stays on login page
+  [PASS]  Invalid login shows error or stays on login
+
+────────────────────────────────────────────────────────────
+  [TEST]  Console Error Monitoring
+────────────────────────────────────────────────────────────
+  [PASS]  No critical JS errors on home
+  [PASS]  No critical JS errors on explore
+  [PASS]  No critical JS errors on freelancers
+  [PASS]  No critical JS errors on auctions
+  [PASS]  No critical JS errors on login
+  [PASS]  No critical JS errors on register
+
+────────────────────────────────────────────────────────────
+  [TEST]  Performance Basics
+────────────────────────────────────────────────────────────
+  [PASS]  Page has images (total=12)
+  [PASS]  Images use loading attribute  ->  lazy=9 eager=0
+  [PASS]  Next.js <Image> optimizer active on freelancers  ->  data-nimg=2
+
+────────────────────────────────────────────────────────────
+  [TEST]  Accessibility Basics
+────────────────────────────────────────────────────────────
+  [PASS]  Inputs labeled (2/2)
+  [PASS]  Buttons have text/aria-label  ->  0 unlabeled
+
+────────────────────────────────────────────────────────────
+  [TEST]  Live Auction Page
+────────────────────────────────────────────────────────────
+  [PASS]  Live auctions page loads
+  [PASS]  Live auctions has visible content
+  [PASS]  Live auctions has no JS errors
+
+────────────────────────────────────────────────────────────
+  [TEST]  Dashboard Auth Redirect
+────────────────────────────────────────────────────────────
+  [PASS]  Dashboard redirects or loads for unauthenticated user  ->  http://localhost:3002/login
+
+────────────────────────────────────────────────────────────
+  [TEST]  Freelancer Profile Page
+────────────────────────────────────────────────────────────
+  [PASS]  Freelancer profile route exists (no cards in DB yet)
+
+────────────────────────────────────────────────────────────
+  [TEST]  Protected Pages Auth Redirect
+────────────────────────────────────────────────────────────
+  [PASS]  messages redirects or loads  ->  http://localhost:3002/login
+  [PASS]  notifications redirects or loads  ->  http://localhost:3002/login
+  [PASS]  freelancer-dash redirects or loads  ->  http://localhost:3002/login
+  [PASS]  client-dash redirects or loads  ->  http://localhost:3002/login
+
+============================================================
+  RESULTS: 52/52 passed   0 failed
+============================================================
+
